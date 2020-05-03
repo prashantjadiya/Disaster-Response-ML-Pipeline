@@ -69,7 +69,12 @@ def build_model():
         ('tfidf', TfidfTransformer()),
         ('clf', MultiOutputClassifier(OneVsRestClassifier(LinearSVC(random_state = 0))))
     ])
-    return pipeline
+    parameters = {
+                'tfidf__smooth_idf':[True, False],
+                'clf__estimator__estimator__C': [1, 5]
+             }
+    cv = GridSearchCV(pipeline, param_grid=parameters)
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
