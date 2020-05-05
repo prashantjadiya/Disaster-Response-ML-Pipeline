@@ -16,6 +16,9 @@ models/classifier.pkl -> saved model
 
 disaster.png -> screenshot of web-app
 
+### I have written blog for this project. You can check it here https://medium.com/@prashantjadiya/3-steps-to-tackle-any-natural-disaster-using-machine-learning-d114ba779a88
+
+
 ### Instructions to run:
 1. Run the following commands in the project's root directory to set up your database and model.
 
